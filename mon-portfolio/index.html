@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo Freitas | Portfolio Marketing Digital & No-Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Enzo Freitas</div>
+            <ul>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cv.pdf" target="_blank" class="nav-cv">Mon CV 📄</a></li>
+                <li><button id="theme-toggle" aria-label="Changer de thème">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero fade-in">
+        <h1>Bonjour, je suis <span>Enzo Freitas</span> 👋</h1>
+        <p>Expert en <strong>Marketing Digital</strong> & Spécialiste <strong>No-Code / Low-Code</strong>.</p>
+        <p>J'automatise des processus, conçois des sites web optimisés et propulse des campagnes marketing efficaces.</p>
+        
+        <div class="hero-buttons">
+            <a href="#projets" class="btn">Découvrir mes réalisations</a>
+            <a href="https://www.linkedin.com/in/enzo-freitas/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Mon LinkedIn 🔗</a>
+        </div>
+    </section>
+
+    <section id="projets" class="container fade-in">
+        <h2>Mes Projets</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Automation & Lead Gen</h3>
+                <p>Mise en place d'un tunnel de capture de leads et automatisation des e-mails d'onboarding.</p>
+                <a href="#" target="_blank">Voir le projet →</a>
+            </div>
+            <div class="card">
+                <h3>Site Web / Landing Page</h3>
+                <p>Création d'une landing page haute conversion conçue avec des outils No-Code / Low-Code.</p>
+                <a href="#" target="_blank">Voir le projet →</a>
+            </div>
+            <div class="card">
+                <h3>Campagne Marketing & Analytics</h3>
+                <p>Optimisation du SEO, suivi du trafic et analyse des performances de conversion.</p>
+                <a href="#" target="_blank">Voir le projet →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="container fade-in">
+        <h2>Compétences & Outils</h2>
+        <ul class="skills">
+            <li>Make / Zapier</li>
+            <li>Webflow / Bubble</li>
+            <li>Airtable / Notion</li>
+            <li>SEO & Analytics</li>
+            <li>Inbound Marketing</li>
+            <li>HTML / CSS / JS (Basiques)</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container fade-in">
+        <h2>Me Contacter</h2>
+        <p>Vous avez un projet ou une opportunité ? Laissez-moi un message :</p>
+        
+        <form action="https://formspree.io/f/xppwngay" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Votre nom</label>
+                <input type="text" id="name" name="name" required placeholder="Ex: Marie Dupont">
+            </div>
+            <div class="form-group">
+                <label for="email">Votre e-mail</label>
+                <input type="email" id="email" name="_replyto" required placeholder="nom@exemple.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Bonjour Enzo..."></textarea>
+            </div>
+            <button type="submit" class="btn">Envoyer le message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Enzo Freitas - Marketing Digital & No-Code • <a href="https://www.linkedin.com/in/enzo-freitas/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
