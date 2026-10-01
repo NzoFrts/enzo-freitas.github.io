@@ -1,32 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById("theme-toggle");
-    const currentTheme = localStorage.getItem("theme");
-
-    if (currentTheme) {
-        document.documentElement.setAttribute("data-theme", currentTheme);
-        toggleBtn.textContent = currentTheme === "dark" ? "☀️" : "🌙";
-    }
-
-    toggleBtn.addEventListener("click", () => {
-        let theme = document.documentElement.getAttribute("data-theme");
-        if (theme === "dark") {
-            document.documentElement.removeAttribute("data-theme");
-            localStorage.setItem("theme", "light");
-            toggleBtn.textContent = "🌙";
-        } else {
-            document.documentElement.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark");
-            toggleBtn.textContent = "☀️";
+// Défilement fluide pour les liens de navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
         }
     });
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 });
